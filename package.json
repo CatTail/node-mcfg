@@ -4,8 +4,7 @@
   "repository": "CatTail/node-mcfg",
   "version": "0.0.0",
   "main": "dist/index.js",
-  "keywords": [
-  ],
+  "keywords": [],
   "files": [
     "dist"
   ],
@@ -25,14 +24,16 @@
   },
   "license": "MIT",
   "dependencies": {
-    "debug": "^2.2.0"
+    "async": "^2.1.4",
+    "debug": "^2.6.0",
+    "include-all": "^3.0.0",
+    "lodash": "^4.17.4"
   },
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "babel src -d dist --copy-files",
     "lint": "standard",
-    "pretest": "npm run build",
-    "test": "NODE_ENV=test babel-node ./node_modules/.bin/_mocha --reporter spec $npm_package_options_mocha 'src/**/*.spec.js'",
+    "test": "DEBUG=mcfg NODE_ENV=test babel-node ./node_modules/.bin/_mocha --reporter spec $npm_package_options_mocha 'src/**/*.spec.js'",
     "test-cov": "NODE_ENV=test babel-node ./node_modules/.bin/isparta cover --root src --report html _mocha -- $npm_package_options_mocha 'src/**/*.spec.js'",
     "test-travis": "NODE_ENV=test babel-node ./node_modules/.bin/isparta cover --root src --report lcovonly _mocha -- $npm_package_options_mocha 'src/**/*.spec.js'",
     "prepublish": "npm run build",

@@ -4,7 +4,16 @@
 
 ## Installation
 
+  npm install --save mcfg
+
 ## Usage
+
+  const load = require('mcfg')
+  const config = load(__dirname + '/server/config')
+
+## Credit
+
+This project forked from [sailsjs](https://github.com/balderdashy/sails/blob/5953c2328d465837f86dfe56761991c5cf456748/lib/hooks/moduleloader/index.js#L127) user local configuration loader.
 
 ## License
 
