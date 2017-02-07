@@ -4,12 +4,12 @@
 
 ## Installation
 
-  npm install --save mcfg
+    npm install --save mcfg
 
 ## Usage
 
-  const load = require('mcfg')
-  const config = load(__dirname + '/server/config')
+    const load = require('mcfg')
+    const config = load(__dirname + '/server/config')
 
 ## Credit
 
