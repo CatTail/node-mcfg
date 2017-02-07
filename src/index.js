@@ -12,6 +12,7 @@ function loadUserConfig (userConfigPath, environment) {
     exclude: ['locales', /local\..+/],
     excludeDirs: /(locales|env)$/,
     filter: /^([^.]+)\.(?:(?!md|txt).)+$/,
+    optional: true,
     flatten: true,
     keepDirectoryPath: true
   })
